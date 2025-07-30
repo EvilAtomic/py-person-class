@@ -1,6 +1,5 @@
 class Person:
     people = {}
-
     def __init__(self, name: str, age: int):
         self.name = name
         self.age = age
@@ -8,6 +7,8 @@ class Person:
 
 def create_person_list(people: list) -> list:
     Person.people.clear()
+
+    
     for item in people:
         Person(item["name"], item["age"])
 
