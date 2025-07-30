@@ -12,11 +12,10 @@ def create_person_list(people: list) -> list:
         name = i["name"]
         age = i["age"]
         Person(name, age)
-        person = Person.people[name]
     for i in people:
         glob = Person.people[i["name"]]
         if i.get("wife"):
             glob.wife = Person.people[i["wife"]]
         if i.get("husband"):
-           glob.husband = Person.people[i["husband"]]
+            glob.husband = Person.people[i["husband"]]
     return list(Person.people.values())
