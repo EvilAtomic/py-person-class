@@ -4,10 +4,11 @@ class Person:
     def __init__(self,name: str, age: int):
         self.name = name
         self.age = age
-        Person.people [name] = self
-
+        Person.people[name] = self
 
 def create_person_list(people: list) -> list:
+    Person.people.clear()
+
     for i in people:
         name = i["name"]
         age = i["age"]
