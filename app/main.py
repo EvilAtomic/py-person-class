@@ -19,4 +19,5 @@ def create_person_list(people: list) -> list:
             glob.wife = Person.people[i["wife"]]
         if i.get("husband"):
            glob.husband = Person.people[i["husband"]]
+
     return list(Person.people.values())
